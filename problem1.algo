@@ -1,0 +1,39 @@
+
+ALGORITHM algo2
+VAR
+    array1 : ARRAY_OF INTEGER[4];
+    array2 : ARRAY_OF INTEGER[5];
+    somme:INTEGER=0
+    found:BOOLEAN=false
+BEGIN
+
+    FOR i FROM 0 TO array1.length-1 STEP 1  DO
+        FOR j FROM 0 TO array2.length-1 STEP 1  DO
+            IF (array1[i]==array2[j]) THEN
+                found=true
+            ELSE
+                found=false
+                
+            END_IF
+        END_FOR
+    END_FOR
+
+    FOR j FROM 0 TO array2.length-1 STEP 1  DO
+        FOR i FROM 0 TO array1.length-1 STEP 1  DO
+           IF (array1[i]==array2[j]) THEN
+                found=true
+            ELSE
+                found=false
+                
+            END_IF
+        END_FOR
+            
+    END_FOR
+
+IF (found==false) THEN
+    somme+=array1[i]
+
+END_IF
+write("la somme est "+ somme)
+
+END

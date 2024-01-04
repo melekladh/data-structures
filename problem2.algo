@@ -1,0 +1,26 @@
+PROCEDURE dot_product(v1,v2,VAR ps)
+    VAR
+        
+    BEGIN
+        IF (v1.length==v2.length) THEN
+            FOR i FROM 0 TO v1.length-1 STEP 1  DO
+                    ps+=v1[i]*v2[i]
+                END_FOR
+            
+        ELSE
+            write("v1 and v2 dont have the same length")
+        END_IF
+    END
+ALGORITHM Dot Product
+VAR
+    v1 : ARRAY_OF INTEGER[3];
+    v2 : ARRAY_OF INTEGER[3];
+    ps: INTEGER :=0
+BEGIN
+   dot_product(v1,v2,ps)
+        IF (ps==0) THEN
+            write("les vecteurs sont orthogonaux")
+        ELSE
+            write("les vecteurs ne sont pas orthogonaux")
+        END_IF
+    END
