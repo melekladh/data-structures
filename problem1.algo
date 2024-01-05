@@ -8,32 +8,37 @@ VAR
 BEGIN
 
     FOR i FROM 0 TO array1.length-1 STEP 1  DO
+            found:=false
+
         FOR j FROM 0 TO array2.length-1 STEP 1  DO
             IF (array1[i]==array2[j]) THEN
-                found=true
-            ELSE
-                found=false
-                
+                found:=true
+            if   found==false then
+
+
+
+                somme+=array1[i]
+
             END_IF
         END_FOR
     END_FOR
 
     FOR j FROM 0 TO array2.length-1 STEP 1  DO
+            found:=false
+
         FOR i FROM 0 TO array1.length-1 STEP 1  DO
-           IF (array1[i]==array2[j]) THEN
-                found=true
-            ELSE
-                found=false
-                
+            IF (array1[i]==array2[j]) THEN
+                found:=true
+            if   found==false then
+
+
+
+                somme+=array2[j]
+
             END_IF
         END_FOR
-            
     END_FOR
 
-IF (found==false) THEN
-    somme+=array1[i]
-
-END_IF
 write("la somme est "+ somme)
 
 END
