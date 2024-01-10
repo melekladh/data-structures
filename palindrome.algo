@@ -1,0 +1,18 @@
+FUNCTION palindrome(ch:STRING,i:INTEGER) : BOOLEAN
+VAR
+    ch:STRING
+BEGIN
+    j=ch.length-1-i
+    if (i==j) or i>j THEN
+        return True
+    else if (ch[i]<>ch[j])
+        return false
+    else 
+        
+        palindrome(ch,i+1)    
+    END_IF
+        
+
+        
+
+END
